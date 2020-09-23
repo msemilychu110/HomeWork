@@ -1,0 +1,71 @@
+1)
+
+func sumProblem(sum: Int, array: [Int]) -> Int {
+      var counter = 0
+     for i in 0..<array.count {
+        for j in i+1..<array.count {
+             if array[i] + array[j] == 5 {
+                 counter += 1
+             }
+     }
+     }
+     return counter
+}
+ 
+ var nums = [1,2,3,4,5]
+ let num = sumProblem(sum: 5, array: nums)
+ print(num)
+
+
+
+2)
+
+ func trailingClosure(array: [Int], closure:((Int)-> Int))->[Int:Int] {
+ var dict = [Int: Int]()
+   for num in array {
+          dict[num] = closure(num)
+}
+return dict
+}
+
+var array2 = [1,2,3,4,5]
+let result = trailingClosure(array:array2){
+         return $0 * 2
+}
+
+print(result)
+
+
+3)
+
+What is the difference between var and let?
+let is immutable, var is muttable
+
+What is an optional?
+nil or has a value
+
+What is optional chaining vs optional binding?
+Optional Chaining is calling variable, method etc on an optional that could be nil
+optional binding is safely unwrapping optional
+
+What are the different ways to unwrap an optional? How do they work? Are they safe?
+nil coalescing, and optional binding are safe ways to unbind, forced unwrapping is unsafe way to unbind
+
+What is a closure?
+ a block of code that can be passed around
+
+What is the difference between a class and a struct?
+class is reference type and has inheritance, struct is value type and doesn't have inheritance
+
+What is the syntax '??' do?
+forced unwrapping
+
+What is a tuple?
+tuple is a collection type that can multiple values/types
+
+What is Any vs AnyObject?
+Any is any type, AnyObject is also any type (but AnyObject is used when it has do with objective c codes)
+
+What is a protocol?
+protocol defines blueprint for variables, method, and can be adopted by class, struct, enum etc.
+
