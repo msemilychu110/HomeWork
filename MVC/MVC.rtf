@@ -1,0 +1,21 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 						MVC\
+\
+MVC stands for Model View Controller. \
+It is Apple\'92 recommended architectural pattern approach to writing codes. \
+Model - this is where the data resides, example:  persistence, model objects, parsers, managers, and networking codes\
+View - it\'92s the visual layer of the app\
+Controller - meditates between the view and the model through the delegation pattern. The controller entity won\'92t know the concrete view it\'92s dealing with. It communicates with an abstraction through protocol. Example \'97 UITableView communicates with its data source through UITableViewDataSource protocol\
+\
+Pros - testability, maintainability, and scalability . Also satisfies single responsibility principle of solid\
+\
+Cons - view depends both on controller and model , therefore unit testing the view, both controller and model must be mocked\
+Model is doing too much work \'97 getting the data, even preparing the result to be displayed on the view \
+\
+}
